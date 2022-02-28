@@ -12,6 +12,7 @@ const c1 = Buffer.from(ciphertext[0], 'hex')
 const c2 = Buffer.from(ciphertext[1], 'hex')
 const c3 = Buffer.from(ciphertext[2], 'hex')
 const c4 = Buffer.from(ciphertext[3], 'hex')
+
 function bin2hex(b) {
   return b.match(/.{4}/g).reduce(function(acc, i) {
       return acc + parseInt(i, 2).toString(16);
@@ -81,5 +82,4 @@ if (cluster.isMaster) {
   app.listen(port, () => {
     console.log(`App listening on port ${port}`);
   });
-
 }
