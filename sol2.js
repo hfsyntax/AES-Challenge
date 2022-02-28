@@ -62,7 +62,6 @@ function generateStates(n){
   console.log(`process completed took: ${console.timeEnd('stuff')}`)
 }
 
-
 if (cluster.isMaster) {
   // Fork workers.
   for (let i = 0; i < totalCPUs; i++) {
